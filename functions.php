@@ -12,6 +12,18 @@ function imgpath($path) {
 	return get_stylesheet_directory_uri() . '/assets/images/' . $path;
 }
 
+add_filter('next_posts_link_attributes', 'next_posts_link_attributes');
+add_filter('previous_posts_link_attributes', 'previous_posts_link_attributes');
+add_filter('next_post_link_attributes', 'next_posts_link_attributes');
+add_filter('previous_post_link_attributes', 'previous_posts_link_attributes');
+
+function next_posts_link_attributes() {
+    return 'class="uk-button uk-button-primary uk-button-large"';
+}
+function previous_posts_link_attributes() {
+    return 'class="uk-button uk-button-primary uk-button-large"';
+}
+
 if ( ! function_exists( 'jgbnd_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.

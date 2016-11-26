@@ -21,7 +21,7 @@
 	      		class="uk-icon-hover uk-icon-medium uk-icon-linkedin"
 	      		title="Let's connect on LinkedIn"></a>
 	  	</p>
-  		<p>&copy; <?= date('Y'); ?> --|-- &lt; /&gt; with <i class="uk-icon-hover uk-icon-heart uk-text-danger"></i>
+  		<p>&copy; <?= date('Y'); ?> __ &lt; /&gt; with <i class="uk-icon-hover uk-icon-heart uk-text-danger"></i>
   			in Delmas <img style="height:18px" src="<?= imgpath('haiti.jpg'); ?>">
 		</p>
 	</div>

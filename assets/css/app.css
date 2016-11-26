@@ -8933,5 +8933,8 @@ img.logo {
 #work h6 {
   color: #fff;
 }
+#contact {
+  border-top: 10px solid #222222;
+}
 
 /*# sourceMappingURL=app.css.map */
