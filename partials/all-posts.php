@@ -15,7 +15,7 @@
 				<?php endwhile;?>
 				<?php wp_reset_postdata(); ?>
 
-				<div class="uk-width-1-1>
+				<div class="uk-width-1-1">
 					<ul class="uk-pagination">
 					    <li class="uk-pagination-previous">
 					    	<?= get_previous_posts_link( );?>

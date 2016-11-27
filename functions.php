@@ -12,17 +12,28 @@ function imgpath($path) {
 	return get_stylesheet_directory_uri() . '/assets/images/' . $path;
 }
 
-add_filter('next_posts_link_attributes', 'next_posts_link_attributes');
-add_filter('previous_posts_link_attributes', 'previous_posts_link_attributes');
-add_filter('next_post_link_attributes', 'next_posts_link_attributes');
-add_filter('previous_post_link_attributes', 'previous_posts_link_attributes');
+// add_filter('next_posts_link_attributes', 'next_posts_link_attributes');
+// add_filter('previous_posts_link_attributes', 'previous_posts_link_attributes');
+// add_filter('next_post_link', 'next_post_link_attributes');
+// add_filter('previous_post_link', 'previous_post_link_attributes');
 
-function next_posts_link_attributes() {
-    return 'class="uk-button uk-button-primary uk-button-large"';
-}
-function previous_posts_link_attributes() {
-    return 'class="uk-button uk-button-primary uk-button-large"';
-}
+// function next_post_link_attributes($output) {
+//     $code = 'class="uk-button uk-button-primary uk-button-large"';
+//     return str_replace('<a href=', '<a '.$code.' href=', $output);
+// }
+
+// function previous_post_link_attributes($output) {
+//     $code = 'class="uk-button uk-button-primary uk-button-large"';
+//     return str_replace('<a href=', '<a '.$code.' href=', $output);
+// }
+
+// function next_posts_link_attributes() {
+//     // return 'class="uk-button uk-button-primary uk-button-large"';
+//     return 'class="uk-text-large uk-text-primary"';
+// }
+// function previous_posts_link_attributes() {
+//     return 'class="uk-button uk-button-primary uk-button-large"';
+// }
 
 if ( ! function_exists( 'jgbnd_setup' ) ) :
 /**
@@ -57,7 +68,10 @@ function jgbnd_setup() {
 	 *
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
-	add_theme_support( 'post-thumbnails' );
+	add_theme_support('post-thumbnails');
+
+	add_image_size('jgbnd-thumb', 343, 212, false);
+	add_image_size('jgbnd-large', 839, 518,565597668, false);
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -109,8 +123,8 @@ function jgbnd_widgets_init() {
 		'description'   => esc_html__( 'Add widgets here.', 'jgbnd' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
 	) );
 }
 add_action( 'widgets_init', 'jgbnd_widgets_init' );

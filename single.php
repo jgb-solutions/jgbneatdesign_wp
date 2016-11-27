@@ -5,7 +5,7 @@ get_header();
 
 	require('partials/single-post.php');
 
-	//get_sidebar();
-	require('partials/contact.php');
+	require('partials/bottom-sidebar.php');
 
+	require('partials/contact.php');
 get_footer();
