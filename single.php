@@ -5,6 +5,8 @@ get_header();
 
 	require('partials/single-post.php');
 
+	echo '<br>';
+
 	require('partials/bottom-sidebar.php');
 
 	require('partials/contact.php');

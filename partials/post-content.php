@@ -1,8 +1,5 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class('thin-border'); ?>>
     <header class="entry-header">
-        <div class="uk-panel-box uk-block-default">
-            <h1 class="uk-text-center no-margin"><?php single_post_title(); ?></h1>
-        </div>
         <!-- Featured Image -->
         <?php the_post_thumbnail('jgbnd-large', ['class'=>'featured-image']); ?>
     </header>

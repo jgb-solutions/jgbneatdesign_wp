@@ -2,7 +2,7 @@
   	<div class="uk-container uk-container-center">
   		<div class="uk-width-medium-3-4 uk-container-center">
   			<div class="uk-grid">
-				<div class="uk-width-medium-1-4 uk-hidden-small">
+				<div class="uk-width-medium-1-4">
 					<ul class="uk-nav uk-nav-side uk-nav-parent-icon" data-uk-nav="">
 						<li class="uk-nav-header">Categories</li>
 
@@ -15,9 +15,10 @@
 									</a>
 								</li>
 						<?php endforeach; ?>
-
-						<li class="uk-nav-divider"></li>
-
+					</ul>
+				</div>
+				<div class="uk-width-medium-1-4">
+					<ul class="uk-nav uk-nav-side uk-nav-parent-icon" data-uk-nav="">
 						<li class="uk-nav-header">Tags</li>
 
 						<?php $tags = get_tags(['orderby' => 'name','order' => 'ASC']);

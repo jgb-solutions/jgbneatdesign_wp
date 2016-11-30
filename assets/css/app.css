@@ -8894,6 +8894,7 @@ a.uk-thumbnail:focus {
 html,
 body {
   background-color: #f5f5f5;
+  background-image: url('../images/bg-pattern2.png');
 }
 header.navbar,
 .uk-navbar {
@@ -8965,6 +8966,20 @@ img.logo {
 }
 .no-margin {
   margin: 0;
+}
+.title-box {
+  margin-top: 2em;
+  padding: 4em 0;
+}
+.title-box h1 {
+  font-family: verdana, sans-serif;
+  line-height: 1em;
+  font-weight: 700;
+  font-size: 50px;
+}
+article {
+  font-size: 1.3em;
+  line-height: 1.6em;
 }
 
 /*# sourceMappingURL=app.css.map */

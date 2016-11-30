@@ -1,4 +1,12 @@
-<section id="posts" class="uk-block">
+<section id="posts">
+		<div class="uk-panel-box uk-block-primary title-box">
+  			<div class="uk-container uk-container-center">
+				<div class="uk-width-1-1">
+    				<h1 class="uk-text-center no-margin uk-text-contrast"><?php single_post_title(); ?></h1>
+				</div>
+			</div>
+		</div>
+	<br>
   	<div class="uk-container uk-container-center">
   		<div class="uk-width-medium-3-4 uk-container-center">
 	     	<div class="uk-grid" data-uk-grid-margin>
