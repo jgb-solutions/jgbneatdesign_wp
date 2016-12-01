@@ -10,7 +10,7 @@
 			                <?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'; ?>
 
 			                <!-- the post category -->
-			                _/_ in
+			                / in
 			                <?php
 			                	$category = get_the_category()[0];
 			                	$cat_link = get_category_link($category->term_id);
@@ -23,7 +23,7 @@
 			            		$tag_links_array = [];
 
 			            		if ($tags) {
-				            		echo '_/_ Tagged:';
+				            		echo '/ Tagged:';
 
 				            		foreach ($tags as $tag) {
 								        $tag_links_array[] = "<a href='" . get_tag_link($tag->term_id) . "'><i class='uk-icon-tags'></i> " . $tag->name . "</a>";

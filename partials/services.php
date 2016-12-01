@@ -8,7 +8,7 @@
                 <div class="uk-grid">
                     <div class="uk-width-medium-2-3 uk-container-center">
                         <p>
-                            We have more than {{ date('Y') - 2010 }} years of experience building for the web and mobile. This has led us to using a variety of tools and technologies that are just right for the job at hand. It means that we will use our skills and the variety of tools in our arsenal to solve your problems. And don't take our word for granted, head to the <a href="#testimonials" data-uk-smooth-scroll>testimonials</a> section and see what our clients say. Here's a short list of direct services we can offer you. You may still <a href="#contact" data-uk-smooth-scroll>contact us</a> for a custom problem you might have.
+                            We have more than <?= date('Y') - 2010 ?> years of experience building for the web and mobile. This has led us to using a variety of tools and technologies that are just right for the job at hand. It means that we will use our skills and the variety of tools in our arsenal to solve your problems. And don't take our word for granted, head to the <a href="#testimonials" data-uk-smooth-scroll>testimonials</a> section and see what our clients say. Here's a short list of direct services we can offer you. You may still <a href="#contact" data-uk-smooth-scroll>contact us</a> for a custom problem you might have.
                         </p>
                     </div>
                 </div>
