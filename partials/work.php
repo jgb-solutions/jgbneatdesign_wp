@@ -1,4 +1,4 @@
-<section id="work" class="uk-block uk-contrast uk-block-warning">
+<section id="work" class="uk-block uk-contrast uk-block-warning yellow-section">
   	<div class="uk-container uk-container-center">
 		<div class="uk-grid" data-uk-grid-margin>
     		<div class="uk-width-1-1" >

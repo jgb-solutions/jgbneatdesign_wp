@@ -10,37 +10,40 @@
             <?php the_content(); ?>
         </div>
 
-        <!-- Sharing buttons -->
-        <hr class="uk-article-divider">
-        <div class="box-meta">
-            <p class="uk-article-meta">
-                <i class="uk-icon-calendar"></i> <span>4 months ago</span> in
-                <a href="category/articles"><i class="uk-icon-folder-open"></i> Articles</a>
-            </p>
-            <p class="uk-article-meta ng-scope">Tagged:
-                <a href="tag/bootstrap">
-                    <i class="uk-icon-tags"></i> Bootstrap
-                </a>
-            </p>
-        </div>
-
         <hr class="uk-article-divider">
 
-        <div>Share this post:
-            <a class="uk-button btn-primary uk-button-large uk-border-rounded" href="https://www.facebook.com/sharer.php?u=http%3A%2F%2Fblog.jgbnd.com.dev%2Fpost%2Fnon-ipsum-est-maiores-molestiae-occaecati-rerum&amp;t=Non ipsum est maiores molestiae occaecati rerum" target="blank">
+        <div class="uk-text-center">
+            <?php $postURL = urlencode(get_permalink()); $postTitle = get_the_title(); ?>
+
+            <h4><i class="uk-icon-share"></i> Share this post</h4>
+            <a class="uk-button btn-primary uk-button-large uk-border-rounded btn"
+                href="https://www.facebook.com/sharer.php?u=<?= $postURL ?>&amp;t=<?= $postTitle ?>" target="blank">
                 <i class="uk-icon-facebook"></i> Facebook
             </a>
-            <a class="uk-button btn-info uk-border-rounded uk-button-large" href="https://twitter.com/share?url=http%3A%2F%2Fblog.jgbnd.com.dev%2Fpost%2Fnon-ipsum-est-maiores-molestiae-occaecati-rerum&amp;text=Non ipsum est maiores molestiae occaecati rerum&amp;via=jgbneatdesign" target="blank">
+            <a class="uk-button btn-info uk-border-rounded uk-button-large btn"
+                href="https://twitter.com/share?url=<?= $postURL ?>&amp;text=<?= $postTitle ?>&amp;via=jgbneatdesign" target="blank">
                 <i class="uk-icon-twitter"></i> Twitter
             </a>
         </div>
-
-        <hr class="uk-article-divider">
-
-        <!-- Comment -->
-        <?php if (comments_open() || get_comments_number()): ?>
-            <h3 class="uk-text-center">Got something to say? Comment your thought.</h3>
-            <?php comments_template(); ?>
-        <?php endif; ?>
     </div>
 </article>
+
+<br>
+<br>
+
+<div class="related-posts uk-text-center">
+    <h3><i class="uk-icon-pencil"></i> Other Posts You Might Enjoy Reading</h3>
+
+    <?php require('related-posts.php') ?>
+</div>
+
+<br>
+<br>
+
+<!-- Comment -->
+<div class="uk-panel-box uk-block-default thin-border">
+    <?php if (comments_open() || get_comments_number()): ?>
+        <h4 class="uk-text-center">Got something to say? Comment your thought.</h4>
+        <?php comments_template(); ?>
+    <?php endif; ?>
+</div>

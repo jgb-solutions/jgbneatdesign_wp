@@ -8923,15 +8923,19 @@ img.logo {
     margin-top: -4em;
   }
 }
-#work {
+.yellow-section {
   background-color: #e28327;
   color: #fff;
 }
-#work h2,
-#work h3,
-#work h4,
-#work h5,
-#work h6 {
+.yellow-section a:link,
+.yellow-section a:visited {
+  color: #fff;
+}
+.yellow-section h2,
+.yellow-section h3,
+.yellow-section h4,
+.yellow-section h5,
+.yellow-section h6 {
   color: #fff;
 }
 .thin-border {
@@ -8954,12 +8958,20 @@ img.logo {
   width: 100%;
   height: auto;
 }
-.btn-primary {
+.btn {
+  font-size: 1.1em;
+  padding: .4em 1em;
+}
+.btn-primary:link,
+.btn-primary:visited,
+.btn-primary:hover {
   color: #fff;
   background-color: #337ab7;
   border-color: #2e6da4;
 }
-.btn-info {
+.btn-info:link,
+.btn-info:visited,
+.btn-info:hover {
   color: #fff;
   background-color: #5bc0de;
   border-color: #46b8da;
@@ -8968,6 +8980,17 @@ img.logo {
   margin: 0;
 }
 .title-box {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#00a8e6+0,2989d8+39,207cca+56,00a8e6+100 */
+  background: #00a8e6;
+  /* Old browsers */
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #00a8e6 0%, #2989d8 39%, #207cca 56%, #00a8e6 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-linear-gradient(315deg, #00a8e6 0%, #2989d8 39%, #207cca 56%, #00a8e6 100%);
+  background: linear-gradient(135deg, #00a8e6 0%, #2989d8 39%, #207cca 56%, #00a8e6 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00a8e6', endColorstr='#00a8e6', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
   margin-top: 2em;
   padding: 4em 0;
 }
@@ -8980,6 +9003,9 @@ img.logo {
 article {
   font-size: 1.3em;
   line-height: 1.6em;
+}
+.box-meta {
+  padding: 1.1em;
 }
 
 /*# sourceMappingURL=app.css.map */
