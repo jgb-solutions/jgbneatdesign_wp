@@ -1,15 +1,23 @@
 <?php
 
+function assetspath($path = '') {
+	return get_stylesheet_directory_uri() . '/assets/' . $path;
+}
+
 function csspath($path) {
-	return get_stylesheet_directory_uri() . '/assets/css/' . $path;
+	return assetspath() . 'css/' . $path;
 }
 
 function jspath($path) {
-	return get_stylesheet_directory_uri() . '/assets/js/' . $path;
+	return assetspath() . 'js/' . $path;
 }
 
 function imgpath($path) {
-	return get_stylesheet_directory_uri() . '/assets/images/' . $path;
+	return assetspath() . 'images/' . $path;
+}
+
+function templatePath($path) {
+	return  get_template_directory() . '/' . $path;
 }
 
 // add_filter('next_posts_link_attributes', 'next_posts_link_attributes');
@@ -76,7 +84,40 @@ function wsis_remove_jetpack_assets() {
 
 add_action( 'wp_enqueue_scripts', 'wsis_remove_jetpack_assets', 20 );
 
+// Remove admin bar css
+// add_action('get_header', 'remove_admin_login_header');
+// function remove_admin_login_header() {
+// 	remove_action('wp_head', '_admin_bar_bump_cb');
+// }
 
+// Elixir
+if (! function_exists('elixir')) {
+    function elixir($file, $buildDirectory = 'build') {
+        static $manifest = [];
+        static $manifestPath;
+
+        if (empty($manifest) || $manifestPath !== $buildDirectory) {
+            $path = templatePath('assets/'.$buildDirectory.'/rev-manifest.json');
+            if (file_exists($path)) {
+                $manifest = json_decode(file_get_contents($path), true);
+                $manifestPath = $buildDirectory;
+            }
+        }
+
+        if (isset($manifest[$file])) {
+            return assetspath(trim($buildDirectory.'/'.$manifest[$file], '/'));
+        }
+
+
+        $unversioned = templatePath($file);
+
+        if (file_exists($unversioned)) {
+            return '/'.trim($file, '/');
+        }
+
+        throw new InvalidArgumentException("File {$file} not defined in asset manifest.");
+    }
+}
 
 
 
@@ -178,12 +219,12 @@ add_action( 'widgets_init', 'jgbnd_widgets_init' );
 /**
  * Enqueue scripts and styles.
  */
-function jgbnd_scripts() {
-	wp_enqueue_style( 'jgbnd-style', csspath('app.css'));
+// function jgbnd_scripts() {
+// 	wp_enqueue_style( 'jgbnd-style', csspath('app.css'));
 
-	wp_enqueue_script( 'jgbnd-script', jspath('app.js'), null, '20151215', true );
-}
-add_action( 'wp_enqueue_scripts', 'jgbnd_scripts' );
+// 	wp_enqueue_script( 'jgbnd-script', jspath('app.js'), null, '20151215', true );
+// }
+// add_action( 'wp_enqueue_scripts', 'jgbnd_scripts' );
 
 /**
  * Implement the Custom Header feature.

@@ -6,6 +6,8 @@
 <link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon.png">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 
+<link rel="stylesheet" type="text/css" href="<?= elixir('css/app.css');?>">
+
 <?php wp_head(); ?>
 </head>
 

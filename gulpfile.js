@@ -17,5 +17,6 @@ elixir(function(mix) {
          	'uikit/components/slideshow-fx.min.js',
          	// 'app.js',
      	], 'assets/js/app.js', 'source/assets/js')
-     // .version(['css/app.css', 'js/all.js'])
+
+        .version(['css/app.css', 'js/app.js'])
 });
