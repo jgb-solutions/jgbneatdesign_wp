@@ -21,7 +21,7 @@
 					</a>
 				</div>
 			<?php } else {
-				echo '<p class="uk-text-center">There are no posts yet.</p>';
+				echo '<div class="uk-width-1-1 uk-text-center"><p>There are no posts yet. Please come back laler!</p></div>';
 			}?>
      	</div>
     </div>
