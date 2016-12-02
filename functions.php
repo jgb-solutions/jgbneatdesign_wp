@@ -5,15 +5,15 @@ function assetspath($path = '') {
 }
 
 function csspath($path) {
-	return assetspath() . 'css/' . $path;
+	return assetspath('css/' . $path);
 }
 
 function jspath($path) {
-	return assetspath() . 'js/' . $path;
+	return assetspath('js/' . $path);
 }
 
 function imgpath($path) {
-	return assetspath() . 'images/' . $path;
+	return assetspath('images/' . $path);
 }
 
 function templatePath($path) {
