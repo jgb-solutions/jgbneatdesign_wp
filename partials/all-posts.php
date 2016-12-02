@@ -31,7 +31,7 @@
 					</ul>
 				</div>
 			<?php else: ?>
-			<p>There are no posts.</p>
+				<div class="uk-width-1-1 uk-text-center"><p>There are no posts yet. Please come back laler!</p></div>
 			<?php endif ?>
      	</div>
     </div>
