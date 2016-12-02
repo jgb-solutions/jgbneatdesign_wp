@@ -84,11 +84,11 @@ function wsis_remove_jetpack_assets() {
 
 add_action( 'wp_enqueue_scripts', 'wsis_remove_jetpack_assets', 20 );
 
-// Remove admin bar css
-// add_action('get_header', 'remove_admin_login_header');
-// function remove_admin_login_header() {
-// 	remove_action('wp_head', '_admin_bar_bump_cb');
-// }
+//Remove admin bar css
+add_action('get_header', 'remove_admin_login_header');
+function remove_admin_login_header() {
+	remove_action('wp_head', '_admin_bar_bump_cb');
+}
 
 // Elixir
 if (! function_exists('elixir')) {
@@ -219,17 +219,23 @@ add_action( 'widgets_init', 'jgbnd_widgets_init' );
 /**
  * Enqueue scripts and styles.
  */
-// function jgbnd_scripts() {
-// 	wp_enqueue_style( 'jgbnd-style', csspath('app.css'));
-
-// 	wp_enqueue_script( 'jgbnd-script', jspath('app.js'), null, '20151215', true );
-// }
-// add_action( 'wp_enqueue_scripts', 'jgbnd_scripts' );
+function jgbnd_scripts() {
+	// wp_enqueue_style( 'jgbnd-style', csspath('app.css'));
+	// wp_enqueue_script( 'jgbnd-script', jspath('app.js'), null, '20151215', true );
+	if (! is_admin()) {
+		wp_deregister_script('jquery');
+		wp_deregister_script('wp-embed');
+		wp_deregister_script('backbone');
+		wp_deregister_script('underscore');
+		wp_deregister_script('mustache');
+	}
+}
+add_action( 'wp_enqueue_scripts', 'jgbnd_scripts' );
 
 /**
  * Implement the Custom Header feature.
  */
-require get_template_directory() . '/inc/custom-header.php';
+// require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.
