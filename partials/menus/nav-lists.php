@@ -1,6 +1,6 @@
 <?php if (is_front_page()): ?>
 	<li>
-	    <a href="#about-us"><i class="uk-icon-info-circle"></i> About Us</a>
+	    <a href="#about"><i class="uk-icon-info-circle"></i> About</a>
 	</li>
 	<li>
 	    <a href="#services"><i class="uk-icon-wrench"></i> Services</a>
@@ -16,7 +16,7 @@
 	</li>
 <?php else: ?>
 	<li>
-	    <a href="/#about-us"><i class="uk-icon-info-circle"></i> About Us</a>
+	    <a href="/#about"><i class="uk-icon-info-circle"></i> About</a>
 	</li>
 	<li>
 	    <a href="/#services"><i class="uk-icon-wrench"></i> Services</a>

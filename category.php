@@ -4,7 +4,7 @@ get_header();
 
 	require('partials/header.php');
 
-	require('partials/all-posts.php');
+	require('partials/posts-category.php');
 
 	require('partials/contact.php');
 

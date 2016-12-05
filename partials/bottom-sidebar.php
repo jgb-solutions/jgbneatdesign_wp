@@ -2,7 +2,7 @@
   	<div class="uk-container uk-container-center">
   		<div class="uk-width-medium-3-4 uk-container-center">
   			<div class="uk-grid">
-				<div class="uk-width-medium-1-4">
+				<div class="uk-width-medium-2-10 uk-block">
 					<ul class="uk-nav uk-nav-side uk-nav-parent-icon" data-uk-nav="">
 						<li class="uk-nav-header"><i class="uk-icon-folder-open"></i> Categories</li>
 
@@ -16,7 +16,7 @@
 						<?php endforeach; ?>
 					</ul>
 				</div>
-				<div class="uk-width-medium-1-4">
+				<div class="uk-width-medium-2-10 uk-block">
 					<ul class="uk-nav uk-nav-side uk-nav-parent-icon" data-uk-nav="">
 						<li class="uk-nav-header"><i class="uk-icon-tag"></i> Tags</li>
 
@@ -30,7 +30,7 @@
 						<?php endforeach; ?>
 					</ul>
 				</div>
-				<div class="uk-width-medium-1-4">
+				<div class="uk-width-medium-3-10 uk-block">
 					<ul class="uk-nav uk-nav-side uk-nav-parent-icon" data-uk-nav="">
 						<li class="uk-nav-header"><i class="uk-icon-pencil"></i> Latest Posts</li>
 
@@ -55,7 +55,7 @@
 						}?>
 					</ul>
 				</div>
-				<div class="uk-width-medium-1-4">
+				<div class="uk-width-medium-3-10 uk-block">
 					<aside id="secondary" class="widget-area" role="complementary">
 						<?php dynamic_sidebar( 'sidebar-1' ); ?>
 					</aside><!-- #secondary -->
