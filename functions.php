@@ -223,7 +223,7 @@ function jgbnd_scripts() {
 	// wp_enqueue_style( 'jgbnd-style', csspath('app.css'));
 	// wp_enqueue_script( 'jgbnd-script', jspath('app.js'), null, '20151215', true );
 	if (! is_admin()) {
-		// wp_deregister_script('jquery');
+		wp_deregister_script('jquery');
 		wp_deregister_script('wp-embed');
 		wp_deregister_script('backbone');
 		wp_deregister_script('underscore');
