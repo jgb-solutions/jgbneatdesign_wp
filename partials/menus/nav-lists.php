@@ -35,6 +35,3 @@
 <li>
     <a href="#contact"><i class="uk-icon-envelope"></i> Contact</a>
 </li>
-<li>
-    <a href="#search"><i class="uk-icon-search"></i></a>
-</li>

@@ -12,7 +12,7 @@
             </div>
 
             <div class="uk-width-medium-2-3">
-                <h2 class="uk-text-center">Who We Are</h2>
+                <h2 class="fancy-title">Who We Are</h2>
                 <p>
                     JGB! Neat Design is currently a one-man-show online technology company owned and operated by Jean Gérard Bousiquot, a Web & Mobile Developer from Delmas, Haiti.
                 </p>

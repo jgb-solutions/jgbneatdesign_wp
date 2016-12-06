@@ -4,10 +4,9 @@
 			<div class="uk-width-1-1">
 				<?php
 					$paged = get_query_var('paged', 1);
-					$page = $paged > 1 ? '(page ' . $paged . ')' : '';
-				?>
+					$page = $paged > 1 ? '(page ' . $paged . ')' : ''; ?>
 				<h1 class="uk-text-center no-margin uk-text-contrast">
-					<i class="uk-icon-pencil"></i> <?php single_post_title(); ?> <small><?= $page; ?></small>
+					<i class="uk-icon-search"></i> <?php printf( esc_html__( 'Search Results for: %s', 'jgbnd' ), '<span>' . get_search_query() . '</span>' ); ?> <small><?= $page; ?></small>
 				</h1>
 			</div>
 		</div>
@@ -34,7 +33,10 @@
 					</ul>
 				</div>
 			<?php else: ?>
-				<div class="uk-width-1-1 uk-text-center"><p>There are no posts yet. Please come back laler!</p></div>
+				<div class="uk-width-1-1 uk-text-center">
+					<p>We didn't find anything for <?= get_search_query() ?>. Sorry!</p>
+					<p>Please use the search form to look for something else or go back to the <a href="/">homepage</a>.</p>
+				</div>
 			<?php endif ?>
      	</div>
     </div>

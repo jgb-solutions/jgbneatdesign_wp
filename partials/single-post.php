@@ -4,7 +4,7 @@
 				<div class="uk-width-1-1">
     				<h1 class="uk-text-center no-margin uk-text-contrast"><?php single_post_title(); ?></h1>
 					<br>
-		            <p class="uk-article-meta uk-text-center">
+		            <p class="uk-text-center">
 		            	<span class="box-meta uk-block-secondary uk-contrast">
 			                <i class="uk-icon-calendar"></i>
 			                <?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'; ?>
@@ -23,7 +23,7 @@
 			            		$tag_links_array = [];
 
 			            		if ($tags) {
-				            		echo '/ Tagged:';
+				            		echo '/ Tagged: ';
 
 				            		foreach ($tags as $tag) {
 								        $tag_links_array[] = "<a href='" . get_tag_link($tag->term_id) . "'><i class='uk-icon-tags'></i> " . $tag->name . "</a>";

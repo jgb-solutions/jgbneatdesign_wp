@@ -3,7 +3,7 @@
         <br>
         <br>
         <div class="uk-text-center">
-        	<h2><i class="uk-icon-envelope"></i> Let's Get In Touch</h2>
+        	<h2 class="fancy-title"><i class="uk-icon-envelope"></i> Let's Get In Touch</h2>
             <p>
                Wanna hire us for your next project or just say hi?<br />
                <i class="uk-icon-envelope uk-text-primary"></i>

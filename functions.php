@@ -20,6 +20,10 @@ function templatePath($path) {
 	return  get_template_directory() . '/' . $path;
 }
 
+function inc($file) {
+	require templatePath($file . '.php');
+}
+
 // add_filter('next_posts_link_attributes', 'next_posts_link_attributes');
 // add_filter('previous_posts_link_attributes', 'previous_posts_link_attributes');
 // add_filter('next_post_link', 'next_post_link_attributes');

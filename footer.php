@@ -1,6 +1,6 @@
-<?php include('partials/footer.php'); ?>
+<?php inc('partials/footer'); ?>
 
-<?php include('partials/menus/off-canvas.php'); ?>
+<?php inc('partials/menus/off-canvas'); ?>
 
 <script src="<?= elixir('js/app.js');?>"></script>
 

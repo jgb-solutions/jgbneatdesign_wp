@@ -3,7 +3,7 @@
 
      	<div class="uk-grid" data-uk-grid-margin>
 			<div class="uk-width-1-1" >
-     			<h2 class="uk-text-center"><i class="uk-icon-pencil"></i> Latest Posts from Our Blog</h2>
+     			<h2 class="fancy-title"><i class="uk-icon-pencil"></i> Latest Posts from Our Blog</h2>
 			</div>
 
 			<?php $query = new WP_Query(['showposts' => 3]);
