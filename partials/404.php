@@ -4,7 +4,7 @@
 			<div class="uk-width-1-1">
 
 				<h1 class="uk-text-center no-margin uk-text-contrast">
-					<i class="uk-icon-close"></i> <?php single_post_title(); ?>
+					<i class="uk-icon-close"></i> OOPS!!! You're lost mate!
 				</h1>
 			</div>
 		</div>
