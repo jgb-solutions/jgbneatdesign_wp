@@ -56,6 +56,10 @@
 					</ul>
 				</div>
 				<div class="uk-width-medium-3-10 uk-block">
+					<h4> <i class="uk-icon-pencil"></i> Get our posts by email</h4>
+
+					<?php require 'mailchimp.php'; ?>
+
 					<aside id="secondary" class="widget-area" role="complementary">
 						<?php dynamic_sidebar( 'sidebar-1' ); ?>
 					</aside><!-- #secondary -->
