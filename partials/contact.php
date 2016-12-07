@@ -7,7 +7,7 @@
             <p>
                Wanna hire us for your next project or just say hi?<br />
                <i class="uk-icon-envelope uk-text-primary"></i>
-               Drop us line at <a href="mailto:hello@jgbneatdesign.com">hello@jgbneatdesign.com</a> <br />
+               Drop us a line at <a href="mailto:hello@jgbneatdesign.com">hello@jgbneatdesign.com</a> <br />
                <i class="uk-icon-phone uk-text-primary"></i>
                Or call us directly at <a href="tel:+50936478199">(509) 3647 8199</a> <br />
                It's always a pleasure to talk business or making new friends \_(0_o)_/
