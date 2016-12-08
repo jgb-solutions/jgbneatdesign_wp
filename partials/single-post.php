@@ -5,34 +5,36 @@
     				<h1 class="uk-text-center no-margin uk-text-contrast"><?php single_post_title(); ?></h1>
 					<br>
 		            <p class="uk-text-center">
-		            	<span class="box-meta uk-block-secondary uk-contrast">
-			                <i class="uk-icon-calendar"></i>
-			                <?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'; ?>
+		            	<small>
+			            	<span class="box-meta uk-block-secondary uk-contrast">
+				                <i class="uk-icon-calendar"></i>
+				                <?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'; ?>
 
-			                <!-- the post category -->
-			                / in
-			                <?php
-			                	$category = get_the_category()[0];
-			                	$cat_link = get_category_link($category->term_id);
-			                ?>
-			                <a href="<?= $cat_link ?>"><i class="uk-icon-folder-open"></i> <?= $category->cat_name ?></a>
+				                <!-- the post category -->
+				                / in
+				                <?php
+				                	$category = get_the_category()[0];
+				                	$cat_link = get_category_link($category->term_id);
+				                ?>
+				                <a href="<?= $cat_link ?>"><i class="uk-icon-folder-open"></i> <?= $category->cat_name ?></a>
 
-							<!-- the post tags -->
-			            	<?php
-			            		$tags = get_the_tags();
-			            		$tag_links_array = [];
+								<!-- the post tags -->
+				            	<?php
+				            		$tags = get_the_tags();
+				            		$tag_links_array = [];
 
-			            		if ($tags) {
-				            		echo '/ Tagged: ';
+				            		if ($tags) {
+					            		echo '/ Tagged: ';
 
-				            		foreach ($tags as $tag) {
-								        $tag_links_array[] = "<a href='" . get_tag_link($tag->term_id) . "'><i class='uk-icon-tags'></i> " . $tag->name . "</a>";
-								    }
+					            		foreach ($tags as $tag) {
+									        $tag_links_array[] = "<a href='" . get_tag_link($tag->term_id) . "'><i class='uk-icon-tags'></i> " . $tag->name . "</a>";
+									    }
 
-								    echo implode(', ', $tag_links_array);
-			            		}
-							?>
-		            	</span>
+									    echo implode(', ', $tag_links_array);
+				            		}
+								?>
+			            	</span>
+		            	</small>
 		            </p>
 				</div>
 			</div>
