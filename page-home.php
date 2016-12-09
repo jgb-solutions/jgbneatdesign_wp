@@ -2,24 +2,23 @@
 /**
 Template Name: Home Page
 **/
-?>
 
-<?php get_header(); ?>
+get_header();
 
-<?php // require('partials/featured.php'); ?>
+// inc('partials/featured');
 
-<?php require('partials/header.php'); ?>
+inc('partials/header');
 
-<?php require('partials/about-us.php'); ?>
+inc('partials/about-us');
 
-<?php require('partials/services.php');?>
+inc('partials/services');
 
-<?php //require('partials/work.php') ?>
+inc('partials/latest-works');
 
-<?php //require('partials/clients.php');?>
+//inc('partials/clients');
 
-<?php require('partials/latest-posts.php');?>
+inc('partials/latest-posts');
 
-<?php require('partials/contact.php'); ?>
+inc('partials/contact');
 
-<?php get_footer(); ?>
+get_footer();

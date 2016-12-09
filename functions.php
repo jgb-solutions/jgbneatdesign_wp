@@ -162,7 +162,8 @@ function jgbnd_setup() {
 	add_theme_support('post-thumbnails');
 
 	add_image_size('jgbnd-thumb', 343, 212, false);
-	add_image_size('jgbnd-large', 839, 518,565597668, false);
+	add_image_size('jgbnd-large', 839, 518.565597668, false);
+	add_image_size('jgbnd-featured', 500, 500, false);
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(

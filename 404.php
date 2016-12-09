@@ -2,10 +2,10 @@
 
 get_header();
 
-	require('partials/header.php');
+inc('partials/header');
 
-	require('partials/404.php');
+inc('partials/404');
 
-	require('partials/contact.php');
+inc('partials/contact');
 
 get_footer();
